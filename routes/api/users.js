@@ -9,7 +9,7 @@ const User = require('../../models/User');
 const router = express.Router();
 
 //@route    POST api/users
-//@desc     Register User
+//@desc     Register/Signup User
 //@access   Public
 router.post(
   '/',
@@ -57,8 +57,7 @@ router.post(
         payload,
         process.env.JWT_PRIVATE_KEY,
         {
-          expiresIn: '5h'
-          //   expiresIn: '1h'
+          expiresIn: '1h'
         },
         (err, token) => {
           if (err) throw err;
