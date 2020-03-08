@@ -10,6 +10,7 @@ module.exports = (req, res, next) => {
 
   try {
     const decodedToken = jwt.verify(token, process.env.JWT_PRIVATE_KEY);
+    //adds user property to request
     req.user = decodedToken.user;
     next();
   } catch (err) {
