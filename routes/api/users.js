@@ -57,7 +57,8 @@ router.post(
         payload,
         process.env.JWT_PRIVATE_KEY,
         {
-          expiresIn: '1h'
+          expiresIn: '5h'
+          //   expiresIn: '1h'
         },
         (err, token) => {
           if (err) throw err;
