@@ -10,7 +10,7 @@ const router = express.Router();
 
 //@route    GET api/auth
 //@desc     Get authenticated user
-//@access   Protected
+//@access   Private
 router.get('/', auth, async (req, res) => {
   const userId = req.user.id;
   try {
