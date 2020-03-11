@@ -23,7 +23,7 @@ router.get('/', auth, async (req, res) => {
     res.status(200).json({ user });
   } catch (err) {
     console.log(err.message);
-    res.status(500).json({ message: 'Server error' });
+    res.status(500).json({ msg: 'Server error' });
   }
 });
 
@@ -79,7 +79,7 @@ router.post(
       );
     } catch (err) {
       console.log(err.message);
-      res.status(500).json({ message: 'Server error' });
+      res.status(500).json({ errors: [{ msg: 'Server Error' }] });
     }
   }
 );
