@@ -20,7 +20,7 @@ router.get('/', auth, async (req, res) => {
       return res.status(404).json({ msg: 'User with given id not found' });
     }
 
-    res.status(200).json({ user });
+    res.status(200).json(user);
   } catch (err) {
     console.log(err.message);
     res.status(500).json({ msg: 'Server error' });
